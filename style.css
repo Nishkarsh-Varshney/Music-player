@@ -1,0 +1,414 @@
+@font-face {
+    font-family: 'Music Player UI';
+    src: url(SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Music Player UI';
+    color: #e5e5e6;
+    transition: 0.1s;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* body {
+    overflow-x: hidden;
+} */
+
+#main {
+    height: 100vh;
+    width: 100%;
+    background-color: #0d0f16;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+}
+
+#left-menu {
+    height: calc(100% - 100px);
+    width: 25%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+}
+
+#left-menu-inner {
+    height: 92%;
+    width: 85%;
+    border-radius: 40px;
+    background-color: #1f212a;
+    position: relative;
+    padding: 30px 15px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #e66d1d;
+    margin-bottom: 70px;
+}
+
+.logo img {
+    width: 30px;
+    position: relative;
+    bottom: 3.5px;
+}
+
+.menu-items {
+    padding: 15px 20px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+    color: #818183;
+
+    &:hover {
+        background-color: #313237;
+    }
+}
+
+
+.menu-items:hover i {
+}
+
+.menu-item1 {
+    background-color: #313237;
+    color: #e5e5e6;
+}
+
+.menu-item1 i {
+    color: #e5e5e6;
+}
+
+.logout {
+    position: absolute;
+    width: max-content;
+    bottom: 10px;
+}
+
+.menu-items i {
+    font-size: 2rem;
+    color: #818183;
+    transition: 0.1s;
+}
+
+.menu-item1 i {
+    color: #e5e5e6;
+}
+
+#hello {
+    font-size: 1.5rem;
+}
+
+.playlists {
+    margin-bottom: 0;
+    margin-left: 70px;
+    width: max-content;
+    padding: 10px 15px;
+    gap: 15px;
+} 
+
+.playlist-items {
+    display: block;
+}
+
+.playlists-image {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px; 
+}
+
+#playlists-image1 {
+    background: url(images/vibe.jpeg) center/cover no-repeat;
+}
+
+#playlists-image2 {
+    background: url(images/dark.jpeg) center/cover no-repeat;
+}
+
+#playlists-image3 {
+    background: url(images/hel.jpeg) center/cover no-repeat;
+}
+
+#section1 {
+    height: 130px;
+    width: 75%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 22px;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    padding: 20px 50px 20px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    width: 370px;
+    background-color: #1f212a;
+
+    &::placeholder {
+        color:#818183;
+    }
+}
+
+.input i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color:#818183;
+}
+
+.pfp  {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: url(images/images\ \(16\).jpeg) center/cover no-repeat;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#id {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons {
+    height: 60px;
+    width: 60px;
+    background-color: #1f212a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #313237;
+    }
+}
+
+.icons i {
+    font-size: 1.75rem;
+    color:#818183;
+}
+
+.icons:hover i {
+    color:#e5e5e6;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.premium {
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    background-color: #1f212a;
+    width: max-content;
+    border-radius: 50px;
+    color:#818183
+}
+
+#section2 {
+    height: 261px;
+    width: 75%;
+    margin-left: 25%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+#section3 {
+    width: 75%;
+    margin-left: 25%;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.genre {
+    padding: 10px 28px;
+    border: 2px solid #3b3b42;
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3b3b42;
+    }
+}
+
+.all {
+    background-color: #238880;
+    border: 2px solid #238880;
+
+    &:hover {
+        background-color: #238880;
+    }
+}
+
+.arrows {
+    margin-bottom: 22.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+}
+
+.arrows i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.right-left-arrow> :nth-child(1) {
+    color:#818183;
+}
+
+.popular-songs-albums {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.album {
+    height: max-content;
+    width: 180px;
+    border-radius: 25px;
+    padding: 10px;
+    flex-shrink: 0;
+
+    &:hover {
+        border: 1px solid white;
+    }
+}
+
+.album-image img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    margin-bottom: 3px;
+}
+
+.song-name {
+    font-size: 0.8rem;
+    color:#e5e5e6;
+    text-align: center;
+}
+
+.artist-name {
+    font-size: 0.8rem;
+    color:#9d9da3;
+    text-align: center;
+}
+
+.player {
+    height: 100px;
+    width: 100%;
+    background-color: #1f212a;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.div1 img {
+    width: 60px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.div1 h3{
+    font-size: 0.9rem;
+    color:#9d9da3;
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.div2 i {
+    font-size: 30px;
+}
+
+.div2> :nth-child(1):active {
+    scale: 0.9;
+}
+
+.div2> :nth-child(2):active {
+    scale: 0.9;
+}
+
+.div2> :nth-child(3):active {
+    scale: 0.9;
+}
+
+.div2 .play {
+    background-color: #57585e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+}
+
+.playline {
+    width: 100%;
+    height: 10px;
+    background-color: #67686b;
+}
+
+#image1 {
+    pointer-events: none;
+}
